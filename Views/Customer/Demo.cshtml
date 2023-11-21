@@ -1,0 +1,20 @@
+﻿
+
+@{
+    ViewData["Title"] = "Privacy";
+}
+
+<h1>Privacy</h1>
+
+
+<form>
+    @Html.AntiForgeryToken()
+
+    @Html.Label("name", "Tên", new {@class="control-label"})<br/>
+    @Html.TextBox("name", null, new {@class="form-control"})
+
+
+    @Html.CheckBox("check")
+    @Html.TextArea("content")
+
+</form>

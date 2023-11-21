@@ -1,0 +1,22 @@
+﻿@model DisplayDemoModel
+@{
+    ViewData["Title"] = "DisplayDemo";
+    Layout = "/Views/Shared/_Layout.cshtml";
+
+    var name = Model.Name;
+    var age = Model.Age;
+}
+
+<h1>Hello world</h1>
+<h2>@ViewData["Title"]</h2>
+
+@{
+    await Html.RenderPartialAsync("DisplayName");
+}
+<div class="box-name">
+    @name
+</div>
+<div class="box-age">
+    @age
+</div>
+
