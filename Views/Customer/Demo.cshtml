@@ -7,11 +7,17 @@
 <h1>Privacy</h1>
 
 
-<form>
+<form asp-controller="Customer" asp-action="Demo">
     @Html.AntiForgeryToken()
 
     @Html.Label("name", "Tên", new {@class="control-label"})<br/>
     @Html.TextBox("name", null, new {@class="form-control"})
+
+    <label class="form-control-plaintext" id="name" name="name">Name</label>
+    <input class="form-control" name="name" id="name" />
+
+@*     <label class="control-label" asp-for="name">Name</label>
+    <input class="control-label" asp-for="name">Name</input> *@
 
 
     @Html.CheckBox("check")

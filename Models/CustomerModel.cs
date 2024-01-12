@@ -3,9 +3,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace WebApplicationSample1.Models
 {
-    public class CustomerModel : DbContext
+    public class CustomerModel
     {
-        public CustomerModel(DbContextOptions options) : base(options)
+        public CustomerModel()
         {
             Name = nameof(CustomerModel);
         }

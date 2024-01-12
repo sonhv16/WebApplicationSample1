@@ -1,0 +1,21 @@
+﻿@model ProductSpecsModel
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<form asp-controller="Product" asp-action="Create" method="post">
+    <div class="help-block" asp-validation-summary="ModelOnly"></div>
+    <label for="Name" class="control-label">Name</label>
+    <input type="text" asp-for="Name" class="form-control"/>
+    <div asp-validation-for="Name" class="help-block"></div>
+
+    <label for="Rate" class="control-label">Rate</label>
+    <input type="text" name="Rate" class="form-control" />
+    <label for="Quantity" class="control-label">SL</label>
+    <input type="text" asp-for="Quantity" class="form-control" />
+    <div asp-validation-for="Quantity" class="help-block"></div>
+
+    <input type="submit" name="submit" class="btn btn-success"/>
+</form>

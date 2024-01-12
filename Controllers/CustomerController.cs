@@ -11,6 +11,11 @@ namespace WebApplicationSample1.Controllers
         {
             return View();
         }
+        public IActionResult Login()
+        {
+            return View();
+        }
+        
 
 
         [Route("/chinhsach")]
@@ -23,7 +28,7 @@ namespace WebApplicationSample1.Controllers
             int pageIndex = 0;
             int pageSize = 10;
 
-            var lst = _service.Paging().Skip(pageIndex * pageSize).Take(pageSize);
+            //var lst = _service.Paging().Skip(pageIndex * pageSize).Take(pageSize);
             return View();
         }
 
